@@ -7,8 +7,8 @@ if (!process.env.MDB_URL) {
 
 // Mongoose Connection
 mongoose
-  .connect(process.env.MDB_URL, { dbName: 'logipartes' } as ConnectOptions)
-  .then((res) => console.log('💻 Mongoose Connected'))
+  .connect(process.env.MDB_URL, { dbName: 'videogames' } as ConnectOptions)
+  .then((_res) => console.log('💻 Mongoose Connected'))
   .catch((err) => console.log('🛑 Mongoose Failed: ' + err));
 
 export default mongoose;
