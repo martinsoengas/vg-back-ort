@@ -1,0 +1,27 @@
+{
+  "name": "vg-back-ort",
+  "version": "1.0.0",
+  "description": "ORT VideoGames Project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -w",
+    "dev": "tsc && nodemon --env-file=.env dist/index",
+    "start": "node --env-file=.env dist/index"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3"
+  }
+}
