@@ -4,6 +4,10 @@ import http from 'http';
 import rateLimit from 'express-rate-limit';
 import morgan from 'morgan';
 
+// Router Imports
+import videogamesRouter from './resources/videogames/videogames.routes.js';
+import developersRouter from './resources/developers/developers.routes.js';
+
 const app = express();
 
 // Rate Limiter
@@ -19,6 +23,10 @@ app.use(limiter);
 app.use(morgan('dev'));
 
 // Routes
+app.use('/videogames', videogamesRouter);
+app.use('/developers', developersRouter);
+app.use('/ratings', developersRouter);
+
 app.use('/', async (req, res) => {
   res.status(200).send({
     system: 'Videogames API',
